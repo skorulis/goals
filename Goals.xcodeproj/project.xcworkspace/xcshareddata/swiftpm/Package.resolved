@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Stinsen",
+        "repositoryURL": "https://github.com/rundfunk47/stinsen",
+        "state": {
+          "branch": "master",
+          "revision": "88a1e1c3325fc6ea716daf8820ea37fde8c9e637",
+          "version": null
+        }
+      },
+      {
+        "package": "Swinject",
+        "repositoryURL": "https://github.com/Swinject/Swinject.git",
+        "state": {
+          "branch": null,
+          "revision": "b1d92a53159fe45e162c307183aec9be15e4e7ae",
+          "version": "2.8.0"
+        }
+      },
+      {
+        "package": "SwinjectAutoregistration",
+        "repositoryURL": "https://github.com/Swinject/SwinjectAutoregistration",
+        "state": {
+          "branch": "master",
+          "revision": "8668bde5f2abe24341de5edc8fad50e57e9b952d",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
