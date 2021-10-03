@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Stinsen
+import ASSwiftUI
 
 // MARK: - Memory footprint
 
@@ -33,14 +34,14 @@ extension GoalListView: View {
             VStack {
                 ForEach(goals) { goal in
                     Button {
-                        
+                        viewModel.selectedGoal = goal
                     } label: {
                         Text(goal.title)
                     }
                 }
                 
                 Button {
-                    
+                    viewModel.selectedGoal = viewModel.newGoal
                 } label: {
                     Text("Add")
                 }
@@ -50,7 +51,9 @@ extension GoalListView: View {
     }
     
     private var navigation: some View {
-        NavigationLink("", destination: details, isActive: .constant(false))
+        NavigationHelper.invisible(selection: $viewModel.selectedGoal) { goal in
+            GoalEditView(viewModel: factory.resolve(GoalEditViewModel.self, argument: goal))
+        }
     }
     
     @ViewBuilder

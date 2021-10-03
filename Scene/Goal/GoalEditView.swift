@@ -12,7 +12,8 @@ import SwiftUI
 
 struct GoalEditView {
     
-    @StateObject var viewModel: GoalEditViewModel
+    // Using observed object may cause issues
+    @ObservedObject var viewModel: GoalEditViewModel
 }
 
 // MARK: - Rendering
@@ -29,7 +30,6 @@ extension GoalEditView: View {
                 }
             }
         }
-        
     }
 }
 

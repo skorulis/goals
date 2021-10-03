@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA0E5790270926550000CC4D /* ASSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FA0E578F270926550000CC4D /* ASSwiftUI */; };
+		FA0E5792270926590000CC4D /* ASSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FA0E5791270926590000CC4D /* ASSwiftUI */; };
 		FA8F5E162707ECD9008607F6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F5E032707ECD7008607F6 /* Persistence.swift */; };
 		FA8F5E172707ECD9008607F6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F5E032707ECD7008607F6 /* Persistence.swift */; };
 		FA8F5E182707ECD9008607F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8F5E042707ECD9008607F6 /* Assets.xcassets */; };
@@ -44,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA0E578E270926420000CC4D /* ASSwiftUI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ASSwiftUI; path = Frameworks/ASSwiftUI; sourceTree = "<group>"; };
 		FA8F5E032707ECD7008607F6 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		FA8F5E042707ECD9008607F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA8F5E092707ECD9008607F6 /* Goals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goals.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0E5790270926550000CC4D /* ASSwiftUI in Frameworks */,
 				FA8F5E242707ED05008607F6 /* SwinjectAutoregistration in Frameworks */,
 				FA8F5E5E270833FB008607F6 /* Stinsen in Frameworks */,
 			);
@@ -77,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0E5792270926590000CC4D /* ASSwiftUI in Frameworks */,
 				FA8F5E272707ED11008607F6 /* SwinjectAutoregistration in Frameworks */,
 				FA8F5E5C270833F3008607F6 /* Stinsen in Frameworks */,
 			);
@@ -118,6 +123,7 @@
 		FA8F5E252707ED11008607F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA0E578E270926420000CC4D /* ASSwiftUI */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -207,6 +213,7 @@
 			packageProductDependencies = (
 				FA8F5E232707ED05008607F6 /* SwinjectAutoregistration */,
 				FA8F5E5D270833FB008607F6 /* Stinsen */,
+				FA0E578F270926550000CC4D /* ASSwiftUI */,
 			);
 			productName = "Goals (iOS)";
 			productReference = FA8F5E092707ECD9008607F6 /* Goals.app */;
@@ -228,6 +235,7 @@
 			packageProductDependencies = (
 				FA8F5E262707ED11008607F6 /* SwinjectAutoregistration */,
 				FA8F5E5B270833F3008607F6 /* Stinsen */,
+				FA0E5791270926590000CC4D /* ASSwiftUI */,
 			);
 			productName = "Goals (macOS)";
 			productReference = FA8F5E0F2707ECD9008607F6 /* Goals.app */;
@@ -465,7 +473,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -495,7 +503,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -530,7 +538,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.skorulis.Goals;
 				PRODUCT_NAME = Goals;
@@ -559,7 +567,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.skorulis.Goals;
 				PRODUCT_NAME = Goals;
@@ -621,6 +629,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FA0E578F270926550000CC4D /* ASSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ASSwiftUI;
+		};
+		FA0E5791270926590000CC4D /* ASSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ASSwiftUI;
+		};
 		FA8F5E232707ED05008607F6 /* SwinjectAutoregistration */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FA8F5E222707ED05008607F6 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
