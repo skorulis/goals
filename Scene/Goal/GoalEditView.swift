@@ -14,6 +14,8 @@ struct GoalEditView {
     
     // Using observed object may cause issues
     @ObservedObject var viewModel: GoalEditViewModel
+    
+    @Environment(\.presentationMode) var presentationMode
 }
 
 // MARK: - Rendering
@@ -22,15 +24,50 @@ extension GoalEditView: View {
     
     var body: some View {
         ScrollView {
-            VStack {
+            VStack(alignment: .leading) {
                 TextField("Name", text: $viewModel.title)
                 TextEditor(text: $viewModel.details)
-                Button(action: viewModel.save) {
-                    Text("Save")
-                }
+                    .frame(minHeight: 200)
+                targetDate
+                buttons
+            }
+            .padding(16)
+        }
+        
+    }
+    
+    private var targetDate: some View {
+        Button {
+            viewModel.selectingDate = true
+        } label: {
+            Text(viewModel.targetText)
+        }
+        .popover(isPresented: $viewModel.selectingDate) {
+            DateSelectionView(date: $viewModel.target)
+        }
+    }
+    
+    private var buttons: some View {
+        HStack {
+            Button(action: viewModel.save) {
+                Text("Save")
+            }
+            
+            Button(action: delete) {
+                Text("Delete")
             }
         }
     }
+}
+
+// MARK: - Behaviors
+
+extension GoalEditView {
+    
+    func delete() {
+        viewModel.delete()
+    }
+    
 }
 
 // MARK: - Previews
@@ -38,7 +75,8 @@ extension GoalEditView: View {
 struct GoalEditView_Previews: PreviewProvider {
     
     static var previews: some View {
-        let viewModel = GoalEditViewModel(goal: Goal())
+        let db = PersistenceController.inMemory
+        let viewModel = GoalEditViewModel(goal: Goal(context: db.mainContext))
         GoalEditView(viewModel: viewModel)
     }
 }

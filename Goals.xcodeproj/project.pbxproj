@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		FA0E5790270926550000CC4D /* ASSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FA0E578F270926550000CC4D /* ASSwiftUI */; };
 		FA0E5792270926590000CC4D /* ASSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FA0E5791270926590000CC4D /* ASSwiftUI */; };
+		FA0E5796270937720000CC4D /* DateSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E5795270937720000CC4D /* DateSelectionView.swift */; };
+		FA0E5797270937720000CC4D /* DateSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E5795270937720000CC4D /* DateSelectionView.swift */; };
+		FA0E579A27093CD90000CC4D /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E579927093CD90000CC4D /* DateFormatter+Extensions.swift */; };
+		FA0E579B27093CD90000CC4D /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E579927093CD90000CC4D /* DateFormatter+Extensions.swift */; };
+		FA100FD8270956E300F6D733 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABB3C3527094379008DE42A /* CloudKit.framework */; };
+		FA100FDB27097AB100F6D733 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABB3C3527094379008DE42A /* CloudKit.framework */; };
 		FA8F5E162707ECD9008607F6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F5E032707ECD7008607F6 /* Persistence.swift */; };
 		FA8F5E172707ECD9008607F6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F5E032707ECD7008607F6 /* Persistence.swift */; };
 		FA8F5E182707ECD9008607F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8F5E042707ECD9008607F6 /* Assets.xcassets */; };
@@ -47,6 +53,8 @@
 
 /* Begin PBXFileReference section */
 		FA0E578E270926420000CC4D /* ASSwiftUI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ASSwiftUI; path = Frameworks/ASSwiftUI; sourceTree = "<group>"; };
+		FA0E5795270937720000CC4D /* DateSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionView.swift; sourceTree = "<group>"; };
+		FA0E579927093CD90000CC4D /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		FA8F5E032707ECD7008607F6 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		FA8F5E042707ECD9008607F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA8F5E092707ECD9008607F6 /* Goals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goals.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +72,10 @@
 		FA8F5E4E27081F70008607F6 /* GoalEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalEditView.swift; sourceTree = "<group>"; };
 		FA8F5E5127081F96008607F6 /* GoalEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalEditViewModel.swift; sourceTree = "<group>"; };
 		FA8F5E5F2708345D008607F6 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		FABB3C3527094379008DE42A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		FABB3C39270945A0008DE42A /* Goals-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Goals-iOS.entitlements"; sourceTree = "<group>"; };
+		FABB3C3A270945A0008DE42A /* Goals-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Goals-iOS-Info.plist"; sourceTree = "<group>"; };
+		FABB3C3B270945A0008DE42A /* Goals-macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Goals-macOS.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +84,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0E5790270926550000CC4D /* ASSwiftUI in Frameworks */,
+				FA100FD8270956E300F6D733 /* CloudKit.framework in Frameworks */,
 				FA8F5E242707ED05008607F6 /* SwinjectAutoregistration in Frameworks */,
 				FA8F5E5E270833FB008607F6 /* Stinsen in Frameworks */,
 			);
@@ -82,6 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0E5792270926590000CC4D /* ASSwiftUI in Frameworks */,
+				FA100FDB27097AB100F6D733 /* CloudKit.framework in Frameworks */,
 				FA8F5E272707ED11008607F6 /* SwinjectAutoregistration in Frameworks */,
 				FA8F5E5C270833F3008607F6 /* Stinsen in Frameworks */,
 			);
@@ -90,9 +104,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA0E5793270937480000CC4D /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				FA0E579827093CCE0000CC4D /* Formatters */,
+				FA0E5794270937520000CC4D /* SwiftUI */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		FA0E5794270937520000CC4D /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				FA0E5795270937720000CC4D /* DateSelectionView.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		FA0E579827093CCE0000CC4D /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				FA0E579927093CD90000CC4D /* DateFormatter+Extensions.swift */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
 		FA8F5DF92707ECD6008607F6 = {
 			isa = PBXGroup;
 			children = (
+				FABB3C38270945A0008DE42A /* Config */,
+				FA0E5793270937480000CC4D /* Infrastructure */,
 				FA8F5E362707EE4A008607F6 /* Model */,
 				FA8F5E3F270812DC008607F6 /* Scene */,
 				FA8F5E282707ED74008607F6 /* Services */,
@@ -123,6 +164,7 @@
 		FA8F5E252707ED11008607F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FABB3C3527094379008DE42A /* CloudKit.framework */,
 				FA0E578E270926420000CC4D /* ASSwiftUI */,
 			);
 			name = Frameworks;
@@ -150,18 +192,18 @@
 		FA8F5E362707EE4A008607F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FA8F5E372707EE4A008607F6 /* Entitiess */,
+				FA8F5E372707EE4A008607F6 /* Entities */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		FA8F5E372707EE4A008607F6 /* Entitiess */ = {
+		FA8F5E372707EE4A008607F6 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				FA8F5E382707EE4A008607F6 /* Goals.xcdatamodeld */,
 				FA8F5E3C2707EF3D008607F6 /* Goal.swift */,
 			);
-			path = Entitiess;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		FA8F5E3F270812DC008607F6 /* Scene */ = {
@@ -192,6 +234,16 @@
 				FA8F5E5127081F96008607F6 /* GoalEditViewModel.swift */,
 			);
 			path = Goal;
+			sourceTree = "<group>";
+		};
+		FABB3C38270945A0008DE42A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				FABB3C39270945A0008DE42A /* Goals-iOS.entitlements */,
+				FABB3C3A270945A0008DE42A /* Goals-iOS-Info.plist */,
+				FABB3C3B270945A0008DE42A /* Goals-macOS.entitlements */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +364,7 @@
 				FA8F5E162707ECD9008607F6 /* Persistence.swift in Sources */,
 				FA8F5E3D2707EF3D008607F6 /* Goal.swift in Sources */,
 				FA8F5E3A2707EE4A008607F6 /* Goals.xcdatamodeld in Sources */,
+				FA0E579A27093CD90000CC4D /* DateFormatter+Extensions.swift in Sources */,
 				FA8F5E5227081F96008607F6 /* GoalEditViewModel.swift in Sources */,
 				FA8F5E43270812DC008607F6 /* ContentView.swift in Sources */,
 				FA8F5E45270812DC008607F6 /* GoalsApp.swift in Sources */,
@@ -319,6 +372,7 @@
 				FA8F5E4C27081349008607F6 /* GoalListViewModel.swift in Sources */,
 				FA8F5E4F27081F70008607F6 /* GoalEditView.swift in Sources */,
 				FA8F5E342707ED74008607F6 /* IOC.swift in Sources */,
+				FA0E5796270937720000CC4D /* DateSelectionView.swift in Sources */,
 				FA8F5E492708133A008607F6 /* GoalListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +387,7 @@
 				FA8F5E172707ECD9008607F6 /* Persistence.swift in Sources */,
 				FA8F5E3E2707EF3D008607F6 /* Goal.swift in Sources */,
 				FA8F5E3B2707EE4A008607F6 /* Goals.xcdatamodeld in Sources */,
+				FA0E579B27093CD90000CC4D /* DateFormatter+Extensions.swift in Sources */,
 				FA8F5E5327081F96008607F6 /* GoalEditViewModel.swift in Sources */,
 				FA8F5E44270812DC008607F6 /* ContentView.swift in Sources */,
 				FA8F5E46270812DC008607F6 /* GoalsApp.swift in Sources */,
@@ -340,6 +395,7 @@
 				FA8F5E4D27081349008607F6 /* GoalListViewModel.swift in Sources */,
 				FA8F5E5027081F70008607F6 /* GoalEditView.swift in Sources */,
 				FA8F5E352707ED74008607F6 /* IOC.swift in Sources */,
+				FA0E5797270937720000CC4D /* DateSelectionView.swift in Sources */,
 				FA8F5E4A2708133A008607F6 /* GoalListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +454,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -451,6 +509,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -463,17 +523,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Config/Goals-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X4S6MUZL2D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/Goals-iOS-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -493,17 +555,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Config/Goals-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X4S6MUZL2D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/Goals-iOS-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -524,6 +588,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Config/Goals-macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -553,6 +618,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Config/Goals-macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;

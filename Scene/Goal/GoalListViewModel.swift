@@ -15,7 +15,6 @@ final class GoalListViewModel: ObservableObject {
     @Published var selectedGoal: Goal?
     
     init(database: PersistenceController) {
-        
         self.database = database
     }
 }

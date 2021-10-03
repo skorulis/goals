@@ -18,5 +18,6 @@ public class Goal: NSManagedObject, Identifiable {
     @NSManaged public var title: String
     @NSManaged public var details: String
     @NSManaged public var timestamp: Date
+    @NSManaged public var target: Date?
     
 }

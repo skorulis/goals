@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import CloudKit
 
 struct PersistenceController {
 
@@ -23,6 +24,13 @@ struct PersistenceController {
         container = NSPersistentCloudKitContainer(name: "Goals")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
+        } else {
+            let cloudPath = "iCloud.com.skorulis.goals"
+            let desc = container.persistentStoreDescriptions.first!
+            desc.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(containerIdentifier: cloudPath)
+                desc.cloudKitContainerOptions?.databaseScope = .public
+            
+            container.persistentStoreDescriptions = [desc]
         }
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
