@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import RealmSwift
 
 struct ContentView: View {
     
@@ -15,6 +16,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             GoalListView(viewModel: factory.resolve())
+                .environment(\.realmConfiguration, Realm.Configuration())
         }
         
     }

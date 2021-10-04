@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import ASSwiftUI
+import RealmSwift
 
 // MARK: - Memory footprint
 
@@ -16,20 +17,6 @@ struct GoalListView {
     @StateObject var viewModel: GoalListViewModel
     
     @EnvironmentObject var factory: GenericFactory
-    
-    @FetchRequest(
-        entity: Goal.entity(),
-        sortDescriptors: [],
-        predicate: Self.activePredicate
-    )
-    var activeGoals: FetchedResults<Goal>
-    
-    @FetchRequest(
-        entity: Goal.entity(),
-        sortDescriptors: [],
-        predicate: Self.inactivePredicate
-    )
-    var inactiveGoals: FetchedResults<Goal>
     
 }
 
@@ -40,16 +27,17 @@ extension GoalListView: View {
     var body: some View {
         ScrollView {
             VStack {
-                ForEach(activeGoals) { goal in
+                ForEach(viewModel.activeGoals) { goal in
                     Button {
                         viewModel.selectedGoal = goal
                     } label: {
                         Text(goal.title)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                 }
                 
                 Text("Finished goals")
-                ForEach(inactiveGoals) { goal in
+                ForEach(viewModel.inactiveGoals) { goal in
                     Button {
                         viewModel.selectedGoal = goal
                     } label: {
@@ -86,13 +74,7 @@ extension GoalListView: View {
 
 extension GoalListView {
     
-    static var activePredicate: NSPredicate {
-        NSPredicate(format: "statusString = %@ OR statusString = nil",Goal.Status.ongoing.rawValue)
-    }
     
-    static var inactivePredicate: NSPredicate {
-        NSPredicate(format: "statusString != %@ AND statusString != nil",Goal.Status.ongoing.rawValue)
-    }
 }
 
 // MARK: - Previews
@@ -100,8 +82,8 @@ extension GoalListView {
 struct GoalListView_Previews: PreviewProvider {
     
     static var previews: some View {
-        let db = PersistenceController.inMemory
-        let viewModel = GoalListViewModel(database: db)
+        let db = RealmService()
+        let viewModel = GoalListViewModel(realm: db)
         GoalListView(viewModel: viewModel)
     }
 }

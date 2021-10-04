@@ -6,15 +6,33 @@
 //
 
 import Foundation
+import Realm
+import RealmSwift
 
 final class GoalListViewModel: ObservableObject {
     
-    let database: PersistenceController
+    let realm: RealmService
     
     @Published var selectedGoal: Goal?
     
-    init(database: PersistenceController) {
-        self.database = database
+    @Published var activeGoals: Results<Goal>
+    @Published var inactiveGoals: Results<Goal>
+    
+    private var activeToken: RLMNotificationToken?
+    private var inactiveToken: RLMNotificationToken?
+    
+    init(realm: RealmService) {
+        self.realm = realm
+        activeGoals = realm.db.objects(Goal.self).filter(Self.activePredicate)
+        inactiveGoals = realm.db.objects(Goal.self).filter(Self.inactivePredicate)
+        
+        activeToken = activeGoals.observe { [unowned self] _ in
+            self.objectWillChange.send()
+        }
+        
+        inactiveToken = inactiveGoals.observe { [unowned self] _ in
+            self.objectWillChange.send()
+        }
     }
 }
 
@@ -23,8 +41,15 @@ final class GoalListViewModel: ObservableObject {
 extension GoalListViewModel {
  
     var newGoal: Goal {
-        let goal = Goal(context: database.container.viewContext)
-        return goal
+        return Goal()
+    }
+    
+    static var activePredicate: NSPredicate {
+        NSPredicate(format: "statusString = %@ OR statusString = nil",Goal.Status.ongoing.rawValue)
+    }
+    
+    static var inactivePredicate: NSPredicate {
+        NSPredicate(format: "statusString != %@ AND statusString != nil",Goal.Status.ongoing.rawValue)
     }
     
 }

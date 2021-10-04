@@ -47,7 +47,8 @@ public final class IOC {
     }
     
     private func setupServices() {
-    
+        container.autoregister(RealmService.self, initializer: RealmService.init)
+            .inObjectScope(.container)
     }
     
     private func setupViewModels() {

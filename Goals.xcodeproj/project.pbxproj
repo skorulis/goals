@@ -15,9 +15,16 @@
 		FA100FDB27097AB100F6D733 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABB3C3527094379008DE42A /* CloudKit.framework */; };
 		FA3ED63B270A9B0000194339 /* GoalSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED63A270A9B0000194339 /* GoalSummaryView.swift */; };
 		FA3ED63C270A9B0000194339 /* GoalSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED63A270A9B0000194339 /* GoalSummaryView.swift */; };
+		FA3ED648270AD05E00194339 /* GoalRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED647270AD05E00194339 /* GoalRealm.swift */; };
+		FA3ED649270AD05E00194339 /* GoalRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED647270AD05E00194339 /* GoalRealm.swift */; };
+		FA3ED64C270AD4EA00194339 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = FA3ED64B270AD4EA00194339 /* Realm */; };
+		FA3ED64E270AD4EA00194339 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FA3ED64D270AD4EA00194339 /* RealmSwift */; };
+		FA3ED650270AD6A600194339 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED64F270AD6A600194339 /* RealmService.swift */; };
+		FA3ED651270AD6A600194339 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED64F270AD6A600194339 /* RealmService.swift */; };
+		FA3ED654270ED44500194339 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED653270ED44500194339 /* Secrets.swift */; };
+		FA3ED655270ED44500194339 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED653270ED44500194339 /* Secrets.swift */; };
 		FA87546A2709ADD4003055FD /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = FA8754692709ADD4003055FD /* SwinjectAutoregistration */; };
 		FA87546C2709AE0F003055FD /* ASSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FA87546B2709AE0F003055FD /* ASSwiftUI */; };
-		FA87546E2709B173003055FD /* ThemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87546D2709B173003055FD /* ThemeService.swift */; };
 		FA8754712709B2AE003055FD /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = FA8754702709B2AE003055FD /* Introspect */; };
 		FA8754732709B2B5003055FD /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = FA8754722709B2B5003055FD /* Introspect */; };
 		FA8F5E162707ECD9008607F6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F5E032707ECD7008607F6 /* Persistence.swift */; };
@@ -55,7 +62,9 @@
 		FA0E5795270937720000CC4D /* DateSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionView.swift; sourceTree = "<group>"; };
 		FA0E579927093CD90000CC4D /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		FA3ED63A270A9B0000194339 /* GoalSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSummaryView.swift; sourceTree = "<group>"; };
-		FA87546D2709B173003055FD /* ThemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeService.swift; sourceTree = "<group>"; };
+		FA3ED647270AD05E00194339 /* GoalRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalRealm.swift; sourceTree = "<group>"; };
+		FA3ED64F270AD6A600194339 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		FA3ED653270ED44500194339 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		FA8F5E032707ECD7008607F6 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		FA8F5E042707ECD9008607F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA8F5E092707ECD9008607F6 /* Goals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goals.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,10 +101,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3ED64E270AD4EA00194339 /* RealmSwift in Frameworks */,
 				FA87546C2709AE0F003055FD /* ASSwiftUI in Frameworks */,
 				FA8754732709B2B5003055FD /* Introspect in Frameworks */,
 				FA100FDB27097AB100F6D733 /* CloudKit.framework in Frameworks */,
 				FA87546A2709ADD4003055FD /* SwinjectAutoregistration in Frameworks */,
+				FA3ED64C270AD4EA00194339 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +136,22 @@
 				FA0E579927093CD90000CC4D /* DateFormatter+Extensions.swift */,
 			);
 			path = Formatters;
+			sourceTree = "<group>";
+		};
+		FA3ED646270AD04B00194339 /* Databasee */ = {
+			isa = PBXGroup;
+			children = (
+				FA3ED64F270AD6A600194339 /* RealmService.swift */,
+			);
+			path = Databasee;
+			sourceTree = "<group>";
+		};
+		FA3ED652270ED42F00194339 /* Secrets */ = {
+			isa = PBXGroup;
+			children = (
+				FA3ED653270ED44500194339 /* Secrets.swift */,
+			);
+			path = Secrets;
 			sourceTree = "<group>";
 		};
 		FA8F5DF92707ECD6008607F6 = {
@@ -171,8 +198,8 @@
 		FA8F5E282707ED74008607F6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FA3ED646270AD04B00194339 /* Databasee */,
 				FA8F5E292707ED74008607F6 /* Root */,
-				FA87546D2709B173003055FD /* ThemeService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -192,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				FA8F5E372707EE4A008607F6 /* Entities */,
+				FA3ED652270ED42F00194339 /* Secrets */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,6 +229,7 @@
 			children = (
 				FA8F5E382707EE4A008607F6 /* Goals.xcdatamodeld */,
 				FA8F5E3C2707EF3D008607F6 /* Goal.swift */,
+				FA3ED647270AD05E00194339 /* GoalRealm.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -285,6 +314,8 @@
 				FA8754692709ADD4003055FD /* SwinjectAutoregistration */,
 				FA87546B2709AE0F003055FD /* ASSwiftUI */,
 				FA8754722709B2B5003055FD /* Introspect */,
+				FA3ED64B270AD4EA00194339 /* Realm */,
+				FA3ED64D270AD4EA00194339 /* RealmSwift */,
 			);
 			productName = "Goals (macOS)";
 			productReference = FA8F5E0F2707ECD9008607F6 /* Goals.app */;
@@ -320,6 +351,7 @@
 			packageReferences = (
 				FA8F5E222707ED05008607F6 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
 				FA87546F2709B2AE003055FD /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				FA3ED64A270AD4EA00194339 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = FA8F5E0A2707ECD9008607F6 /* Products */;
 			projectDirPath = "";
@@ -355,8 +387,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3ED654270ED44500194339 /* Secrets.swift in Sources */,
 				FA8F5E302707ED74008607F6 /* GenericFactory.swift in Sources */,
-				FA87546E2709B173003055FD /* ThemeService.swift in Sources */,
 				FA8F5E2E2707ED74008607F6 /* SingletonService.swift in Sources */,
 				FA8F5E162707ECD9008607F6 /* Persistence.swift in Sources */,
 				FA3ED63B270A9B0000194339 /* GoalSummaryView.swift in Sources */,
@@ -369,8 +401,10 @@
 				FA8F5E322707ED74008607F6 /* ErrorService.swift in Sources */,
 				FA8F5E4C27081349008607F6 /* GoalListViewModel.swift in Sources */,
 				FA8F5E4F27081F70008607F6 /* GoalEditView.swift in Sources */,
+				FA3ED650270AD6A600194339 /* RealmService.swift in Sources */,
 				FA8F5E342707ED74008607F6 /* IOC.swift in Sources */,
 				FA0E5796270937720000CC4D /* DateSelectionView.swift in Sources */,
+				FA3ED648270AD05E00194339 /* GoalRealm.swift in Sources */,
 				FA8F5E492708133A008607F6 /* GoalListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3ED655270ED44500194339 /* Secrets.swift in Sources */,
 				FA8F5E312707ED74008607F6 /* GenericFactory.swift in Sources */,
 				FA8F5E2F2707ED74008607F6 /* SingletonService.swift in Sources */,
 				FA8F5E172707ECD9008607F6 /* Persistence.swift in Sources */,
@@ -392,8 +427,10 @@
 				FA8F5E4D27081349008607F6 /* GoalListViewModel.swift in Sources */,
 				FA8F5E5027081F70008607F6 /* GoalEditView.swift in Sources */,
 				FA3ED63C270A9B0000194339 /* GoalSummaryView.swift in Sources */,
+				FA3ED651270AD6A600194339 /* RealmService.swift in Sources */,
 				FA8F5E352707ED74008607F6 /* IOC.swift in Sources */,
 				FA0E5797270937720000CC4D /* DateSelectionView.swift in Sources */,
+				FA3ED649270AD05E00194339 /* GoalRealm.swift in Sources */,
 				FA8F5E4A2708133A008607F6 /* GoalListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -674,6 +711,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FA3ED64A270AD4EA00194339 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.16.0;
+			};
+		};
 		FA87546F2709B2AE003055FD /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
@@ -686,13 +731,23 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = exactVersion;
+				version = 2.8.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FA3ED64B270AD4EA00194339 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA3ED64A270AD4EA00194339 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		FA3ED64D270AD4EA00194339 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA3ED64A270AD4EA00194339 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
 		FA8754692709ADD4003055FD /* SwinjectAutoregistration */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FA8F5E222707ED05008607F6 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;

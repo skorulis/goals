@@ -31,8 +31,7 @@ extension GoalSummaryView: View {
 struct GoalSummaryView_Previews: PreviewProvider {
     
     static var previews: some View {
-        let db = PersistenceController.inMemory
-        let goal = Goal(context: db.mainContext)
+        let goal = Goal()
         goal.title = "TEST 123"
         return GoalSummaryView(goal: goal)
     }

@@ -96,8 +96,8 @@ extension GoalEditView {
 struct GoalEditView_Previews: PreviewProvider {
     
     static var previews: some View {
-        let db = PersistenceController.inMemory
-        let viewModel = GoalEditViewModel(goal: Goal(context: db.mainContext), database: db)
+        let db = RealmService()
+        let viewModel = GoalEditViewModel(goal: Goal(), database: db)
         GoalEditView(viewModel: viewModel)
     }
 }
