@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftUI
-import Stinsen
 import ASSwiftUI
 
 // MARK: - Memory footprint
@@ -15,7 +14,6 @@ import ASSwiftUI
 struct GoalListView {
     
     @StateObject var viewModel: GoalListViewModel
-    @EnvironmentObject var mainRouter: MainCoordinator.Router
     
     @EnvironmentObject var factory: GenericFactory
     
@@ -45,6 +43,7 @@ extension GoalListView: View {
                 } label: {
                     Text("Add")
                 }
+                .buttonStyle(FlatButtonStyle(.success, .medium))
             }
             navigation
         }

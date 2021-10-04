@@ -20,4 +20,28 @@ public class Goal: NSManagedObject, Identifiable {
     @NSManaged public var timestamp: Date
     @NSManaged public var target: Date?
     
+    @NSManaged private var statusString: String?
+    
+    public var status: Status {
+        get {
+            return Status(rawValue: statusString ?? "") ?? .ongoing
+        }
+        set {
+            statusString = newValue.rawValue
+        }
+    }
+    
+}
+
+extension Goal {
+    
+    public enum Status: String, CaseIterable, Identifiable {
+        case ongoing
+        case finished
+        case failed
+        
+        public var id: String {
+            return rawValue
+        }
+    }
 }

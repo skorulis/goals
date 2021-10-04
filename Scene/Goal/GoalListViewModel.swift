@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Stinsen
 
 final class GoalListViewModel: ObservableObject {
     

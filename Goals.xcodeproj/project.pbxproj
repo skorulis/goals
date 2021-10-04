@@ -7,20 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA0E5790270926550000CC4D /* ASSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FA0E578F270926550000CC4D /* ASSwiftUI */; };
-		FA0E5792270926590000CC4D /* ASSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FA0E5791270926590000CC4D /* ASSwiftUI */; };
 		FA0E5796270937720000CC4D /* DateSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E5795270937720000CC4D /* DateSelectionView.swift */; };
 		FA0E5797270937720000CC4D /* DateSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E5795270937720000CC4D /* DateSelectionView.swift */; };
 		FA0E579A27093CD90000CC4D /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E579927093CD90000CC4D /* DateFormatter+Extensions.swift */; };
 		FA0E579B27093CD90000CC4D /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E579927093CD90000CC4D /* DateFormatter+Extensions.swift */; };
 		FA100FD8270956E300F6D733 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABB3C3527094379008DE42A /* CloudKit.framework */; };
 		FA100FDB27097AB100F6D733 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABB3C3527094379008DE42A /* CloudKit.framework */; };
+		FA87546A2709ADD4003055FD /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = FA8754692709ADD4003055FD /* SwinjectAutoregistration */; };
+		FA87546C2709AE0F003055FD /* ASSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FA87546B2709AE0F003055FD /* ASSwiftUI */; };
+		FA87546E2709B173003055FD /* ThemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87546D2709B173003055FD /* ThemeService.swift */; };
+		FA8754712709B2AE003055FD /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = FA8754702709B2AE003055FD /* Introspect */; };
+		FA8754732709B2B5003055FD /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = FA8754722709B2B5003055FD /* Introspect */; };
 		FA8F5E162707ECD9008607F6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F5E032707ECD7008607F6 /* Persistence.swift */; };
 		FA8F5E172707ECD9008607F6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F5E032707ECD7008607F6 /* Persistence.swift */; };
 		FA8F5E182707ECD9008607F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8F5E042707ECD9008607F6 /* Assets.xcassets */; };
 		FA8F5E192707ECD9008607F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8F5E042707ECD9008607F6 /* Assets.xcassets */; };
-		FA8F5E242707ED05008607F6 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = FA8F5E232707ED05008607F6 /* SwinjectAutoregistration */; };
-		FA8F5E272707ED11008607F6 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = FA8F5E262707ED11008607F6 /* SwinjectAutoregistration */; };
 		FA8F5E2E2707ED74008607F6 /* SingletonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F5E2A2707ED74008607F6 /* SingletonService.swift */; };
 		FA8F5E2F2707ED74008607F6 /* SingletonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F5E2A2707ED74008607F6 /* SingletonService.swift */; };
 		FA8F5E302707ED74008607F6 /* GenericFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F5E2B2707ED74008607F6 /* GenericFactory.swift */; };
@@ -45,16 +46,13 @@
 		FA8F5E5027081F70008607F6 /* GoalEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F5E4E27081F70008607F6 /* GoalEditView.swift */; };
 		FA8F5E5227081F96008607F6 /* GoalEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F5E5127081F96008607F6 /* GoalEditViewModel.swift */; };
 		FA8F5E5327081F96008607F6 /* GoalEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F5E5127081F96008607F6 /* GoalEditViewModel.swift */; };
-		FA8F5E5C270833F3008607F6 /* Stinsen in Frameworks */ = {isa = PBXBuildFile; productRef = FA8F5E5B270833F3008607F6 /* Stinsen */; };
-		FA8F5E5E270833FB008607F6 /* Stinsen in Frameworks */ = {isa = PBXBuildFile; productRef = FA8F5E5D270833FB008607F6 /* Stinsen */; };
-		FA8F5E602708345D008607F6 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F5E5F2708345D008607F6 /* MainCoordinator.swift */; };
-		FA8F5E612708345D008607F6 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F5E5F2708345D008607F6 /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA0E578E270926420000CC4D /* ASSwiftUI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ASSwiftUI; path = Frameworks/ASSwiftUI; sourceTree = "<group>"; };
 		FA0E5795270937720000CC4D /* DateSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionView.swift; sourceTree = "<group>"; };
 		FA0E579927093CD90000CC4D /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		FA87546D2709B173003055FD /* ThemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeService.swift; sourceTree = "<group>"; };
 		FA8F5E032707ECD7008607F6 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		FA8F5E042707ECD9008607F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA8F5E092707ECD9008607F6 /* Goals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goals.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,7 +69,6 @@
 		FA8F5E4B27081349008607F6 /* GoalListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalListViewModel.swift; sourceTree = "<group>"; };
 		FA8F5E4E27081F70008607F6 /* GoalEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalEditView.swift; sourceTree = "<group>"; };
 		FA8F5E5127081F96008607F6 /* GoalEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalEditViewModel.swift; sourceTree = "<group>"; };
-		FA8F5E5F2708345D008607F6 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		FABB3C3527094379008DE42A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		FABB3C39270945A0008DE42A /* Goals-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Goals-iOS.entitlements"; sourceTree = "<group>"; };
 		FABB3C3A270945A0008DE42A /* Goals-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Goals-iOS-Info.plist"; sourceTree = "<group>"; };
@@ -83,10 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA0E5790270926550000CC4D /* ASSwiftUI in Frameworks */,
 				FA100FD8270956E300F6D733 /* CloudKit.framework in Frameworks */,
-				FA8F5E242707ED05008607F6 /* SwinjectAutoregistration in Frameworks */,
-				FA8F5E5E270833FB008607F6 /* Stinsen in Frameworks */,
+				FA8754712709B2AE003055FD /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,10 +89,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA0E5792270926590000CC4D /* ASSwiftUI in Frameworks */,
+				FA87546C2709AE0F003055FD /* ASSwiftUI in Frameworks */,
+				FA8754732709B2B5003055FD /* Introspect in Frameworks */,
 				FA100FDB27097AB100F6D733 /* CloudKit.framework in Frameworks */,
-				FA8F5E272707ED11008607F6 /* SwinjectAutoregistration in Frameworks */,
-				FA8F5E5C270833F3008607F6 /* Stinsen in Frameworks */,
+				FA87546A2709ADD4003055FD /* SwinjectAutoregistration in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,8 +159,8 @@
 		FA8F5E252707ED11008607F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FABB3C3527094379008DE42A /* CloudKit.framework */,
 				FA0E578E270926420000CC4D /* ASSwiftUI */,
+				FABB3C3527094379008DE42A /* CloudKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -174,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				FA8F5E292707ED74008607F6 /* Root */,
+				FA87546D2709B173003055FD /* ThemeService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -211,7 +207,6 @@
 			children = (
 				FA8F5E4727081332008607F6 /* Goal */,
 				FA8F5E40270812DC008607F6 /* Root */,
-				FA8F5E5F2708345D008607F6 /* MainCoordinator.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -263,9 +258,7 @@
 			);
 			name = "Goals (iOS)";
 			packageProductDependencies = (
-				FA8F5E232707ED05008607F6 /* SwinjectAutoregistration */,
-				FA8F5E5D270833FB008607F6 /* Stinsen */,
-				FA0E578F270926550000CC4D /* ASSwiftUI */,
+				FA8754702709B2AE003055FD /* Introspect */,
 			);
 			productName = "Goals (iOS)";
 			productReference = FA8F5E092707ECD9008607F6 /* Goals.app */;
@@ -285,9 +278,9 @@
 			);
 			name = "Goals (macOS)";
 			packageProductDependencies = (
-				FA8F5E262707ED11008607F6 /* SwinjectAutoregistration */,
-				FA8F5E5B270833F3008607F6 /* Stinsen */,
-				FA0E5791270926590000CC4D /* ASSwiftUI */,
+				FA8754692709ADD4003055FD /* SwinjectAutoregistration */,
+				FA87546B2709AE0F003055FD /* ASSwiftUI */,
+				FA8754722709B2B5003055FD /* Introspect */,
 			);
 			productName = "Goals (macOS)";
 			productReference = FA8F5E0F2707ECD9008607F6 /* Goals.app */;
@@ -322,7 +315,7 @@
 			mainGroup = FA8F5DF92707ECD6008607F6;
 			packageReferences = (
 				FA8F5E222707ED05008607F6 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
-				FA8F5E5A270833F3008607F6 /* XCRemoteSwiftPackageReference "stinsen" */,
+				FA87546F2709B2AE003055FD /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = FA8F5E0A2707ECD9008607F6 /* Products */;
 			projectDirPath = "";
@@ -359,7 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA8F5E302707ED74008607F6 /* GenericFactory.swift in Sources */,
-				FA8F5E602708345D008607F6 /* MainCoordinator.swift in Sources */,
+				FA87546E2709B173003055FD /* ThemeService.swift in Sources */,
 				FA8F5E2E2707ED74008607F6 /* SingletonService.swift in Sources */,
 				FA8F5E162707ECD9008607F6 /* Persistence.swift in Sources */,
 				FA8F5E3D2707EF3D008607F6 /* Goal.swift in Sources */,
@@ -382,7 +375,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA8F5E312707ED74008607F6 /* GenericFactory.swift in Sources */,
-				FA8F5E612708345D008607F6 /* MainCoordinator.swift in Sources */,
 				FA8F5E2F2707ED74008607F6 /* SingletonService.swift in Sources */,
 				FA8F5E172707ECD9008607F6 /* Persistence.swift in Sources */,
 				FA8F5E3E2707EF3D008607F6 /* Goal.swift in Sources */,
@@ -676,6 +668,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FA87546F2709B2AE003055FD /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
+		};
 		FA8F5E222707ED05008607F6 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration";
@@ -684,44 +684,27 @@
 				kind = branch;
 			};
 		};
-		FA8F5E5A270833F3008607F6 /* XCRemoteSwiftPackageReference "stinsen" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/rundfunk47/stinsen";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FA0E578F270926550000CC4D /* ASSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ASSwiftUI;
-		};
-		FA0E5791270926590000CC4D /* ASSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ASSwiftUI;
-		};
-		FA8F5E232707ED05008607F6 /* SwinjectAutoregistration */ = {
+		FA8754692709ADD4003055FD /* SwinjectAutoregistration */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FA8F5E222707ED05008607F6 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
 			productName = SwinjectAutoregistration;
 		};
-		FA8F5E262707ED11008607F6 /* SwinjectAutoregistration */ = {
+		FA87546B2709AE0F003055FD /* ASSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FA8F5E222707ED05008607F6 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
-			productName = SwinjectAutoregistration;
+			productName = ASSwiftUI;
 		};
-		FA8F5E5B270833F3008607F6 /* Stinsen */ = {
+		FA8754702709B2AE003055FD /* Introspect */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FA8F5E5A270833F3008607F6 /* XCRemoteSwiftPackageReference "stinsen" */;
-			productName = Stinsen;
+			package = FA87546F2709B2AE003055FD /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
 		};
-		FA8F5E5D270833FB008607F6 /* Stinsen */ = {
+		FA8754722709B2B5003055FD /* Introspect */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FA8F5E5A270833F3008607F6 /* XCRemoteSwiftPackageReference "stinsen" */;
-			productName = Stinsen;
+			package = FA87546F2709B2AE003055FD /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
 		};
 /* End XCSwiftPackageProductDependency section */
 

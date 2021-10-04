@@ -2,11 +2,12 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="21A5534d" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="Goal" representedClassName="Goal" syncable="YES">
         <attribute name="details" attributeType="String" defaultValueString=""/>
+        <attribute name="statusString" optional="YES" attributeType="String"/>
         <attribute name="target" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="timestamp" attributeType="Date" defaultDateTimeInterval="654831960" usesScalarValueType="NO"/>
         <attribute name="title" attributeType="String" defaultValueString=""/>
     </entity>
     <elements>
-        <element name="Goal" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="Goal" positionX="-63" positionY="-18" width="128" height="104"/>
     </elements>
 </model>

@@ -7,6 +7,9 @@
 
 import Foundation
 import SwiftUI
+import ASSwiftUI
+import Neumorphic
+import Introspect
 
 // MARK: - Memory footprint
 
@@ -25,14 +28,29 @@ extension GoalEditView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
+                Picker("Status", selection: $viewModel.status) {
+                    ForEach(Goal.Status.allCases) { status in
+                        Text(status.rawValue)
+                            .tag(status)
+                    }
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                .labelsHidden()
+                
                 TextField("Name", text: $viewModel.title)
+                    .modifier(NeumorphicFieldModifier())
                 TextEditor(text: $viewModel.details)
+                    .introspectTextView(customize: { view in
+                        view.backgroundColor = .clear
+                    })
                     .frame(minHeight: 200)
+                    .modifier(NeumorphicFieldModifier())
                 targetDate
                 buttons
             }
             .padding(16)
         }
+        .background(Color.white)
         
     }
     
@@ -50,12 +68,14 @@ extension GoalEditView: View {
     private var buttons: some View {
         HStack {
             Button(action: viewModel.save) {
-                Text("Save")
+                Text("Save").bold()
             }
+            .buttonStyle(FlatButtonStyle(.success, .small))
             
             Button(action: delete) {
-                Text("Delete")
+                Text("Delete").bold()
             }
+            .buttonStyle(FlatButtonStyle(.danger, .small))
         }
     }
 }

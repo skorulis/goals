@@ -16,12 +16,14 @@ final class GoalEditViewModel: ObservableObject {
     @Published var title: String
     @Published var details: String
     @Published var target: Date?
+    @Published var status: Goal.Status
     
     init(goal: Goal) {
         self.goal = goal
         self.title = goal.title
         self.details = goal.details
         self.target = goal.target
+        self.status = goal.status
     }
     
 }
@@ -50,6 +52,7 @@ extension GoalEditViewModel {
         goal.title = title
         goal.details = details
         goal.target = target
+        goal.status = status
         try? goal.managedObjectContext?.save()
     }
     

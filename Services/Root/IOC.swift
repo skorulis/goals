@@ -43,7 +43,7 @@ public final class IOC {
     }
     
     private func setupCoordinators() {
-        container.autoregister(MainCoordinator.self, initializer: MainCoordinator.init)
+        
     }
     
     private func setupServices() {
