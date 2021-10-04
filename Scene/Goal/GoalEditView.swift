@@ -18,7 +18,7 @@ struct GoalEditView {
     // Using observed object may cause issues
     @ObservedObject var viewModel: GoalEditViewModel
     
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.as_presentation) var as_presentation
 }
 
 // MARK: - Rendering
@@ -86,6 +86,7 @@ extension GoalEditView {
     
     func delete() {
         viewModel.delete()
+        as_presentation.dismiss()
     }
     
 }
@@ -96,7 +97,7 @@ struct GoalEditView_Previews: PreviewProvider {
     
     static var previews: some View {
         let db = PersistenceController.inMemory
-        let viewModel = GoalEditViewModel(goal: Goal(context: db.mainContext))
+        let viewModel = GoalEditViewModel(goal: Goal(context: db.mainContext), database: db)
         GoalEditView(viewModel: viewModel)
     }
 }

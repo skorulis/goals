@@ -13,6 +13,8 @@
 		FA0E579B27093CD90000CC4D /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E579927093CD90000CC4D /* DateFormatter+Extensions.swift */; };
 		FA100FD8270956E300F6D733 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABB3C3527094379008DE42A /* CloudKit.framework */; };
 		FA100FDB27097AB100F6D733 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABB3C3527094379008DE42A /* CloudKit.framework */; };
+		FA3ED63B270A9B0000194339 /* GoalSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED63A270A9B0000194339 /* GoalSummaryView.swift */; };
+		FA3ED63C270A9B0000194339 /* GoalSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED63A270A9B0000194339 /* GoalSummaryView.swift */; };
 		FA87546A2709ADD4003055FD /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = FA8754692709ADD4003055FD /* SwinjectAutoregistration */; };
 		FA87546C2709AE0F003055FD /* ASSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FA87546B2709AE0F003055FD /* ASSwiftUI */; };
 		FA87546E2709B173003055FD /* ThemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87546D2709B173003055FD /* ThemeService.swift */; };
@@ -52,6 +54,7 @@
 		FA0E578E270926420000CC4D /* ASSwiftUI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ASSwiftUI; path = Frameworks/ASSwiftUI; sourceTree = "<group>"; };
 		FA0E5795270937720000CC4D /* DateSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionView.swift; sourceTree = "<group>"; };
 		FA0E579927093CD90000CC4D /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		FA3ED63A270A9B0000194339 /* GoalSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSummaryView.swift; sourceTree = "<group>"; };
 		FA87546D2709B173003055FD /* ThemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeService.swift; sourceTree = "<group>"; };
 		FA8F5E032707ECD7008607F6 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		FA8F5E042707ECD9008607F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -227,6 +230,7 @@
 				FA8F5E4B27081349008607F6 /* GoalListViewModel.swift */,
 				FA8F5E4E27081F70008607F6 /* GoalEditView.swift */,
 				FA8F5E5127081F96008607F6 /* GoalEditViewModel.swift */,
+				FA3ED63A270A9B0000194339 /* GoalSummaryView.swift */,
 			);
 			path = Goal;
 			sourceTree = "<group>";
@@ -355,6 +359,7 @@
 				FA87546E2709B173003055FD /* ThemeService.swift in Sources */,
 				FA8F5E2E2707ED74008607F6 /* SingletonService.swift in Sources */,
 				FA8F5E162707ECD9008607F6 /* Persistence.swift in Sources */,
+				FA3ED63B270A9B0000194339 /* GoalSummaryView.swift in Sources */,
 				FA8F5E3D2707EF3D008607F6 /* Goal.swift in Sources */,
 				FA8F5E3A2707EE4A008607F6 /* Goals.xcdatamodeld in Sources */,
 				FA0E579A27093CD90000CC4D /* DateFormatter+Extensions.swift in Sources */,
@@ -386,6 +391,7 @@
 				FA8F5E332707ED74008607F6 /* ErrorService.swift in Sources */,
 				FA8F5E4D27081349008607F6 /* GoalListViewModel.swift in Sources */,
 				FA8F5E5027081F70008607F6 /* GoalEditView.swift in Sources */,
+				FA3ED63C270A9B0000194339 /* GoalSummaryView.swift in Sources */,
 				FA8F5E352707ED74008607F6 /* IOC.swift in Sources */,
 				FA0E5797270937720000CC4D /* DateSelectionView.swift in Sources */,
 				FA8F5E4A2708133A008607F6 /* GoalListView.swift in Sources */,

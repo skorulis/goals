@@ -17,9 +17,19 @@ struct GoalListView {
     
     @EnvironmentObject var factory: GenericFactory
     
-    @FetchRequest(entity: Goal.entity(), sortDescriptors: [], predicate: nil)
-
-    var goals: FetchedResults<Goal>
+    @FetchRequest(
+        entity: Goal.entity(),
+        sortDescriptors: [],
+        predicate: Self.activePredicate
+    )
+    var activeGoals: FetchedResults<Goal>
+    
+    @FetchRequest(
+        entity: Goal.entity(),
+        sortDescriptors: [],
+        predicate: Self.inactivePredicate
+    )
+    var inactiveGoals: FetchedResults<Goal>
     
 }
 
@@ -30,7 +40,16 @@ extension GoalListView: View {
     var body: some View {
         ScrollView {
             VStack {
-                ForEach(goals) { goal in
+                ForEach(activeGoals) { goal in
+                    Button {
+                        viewModel.selectedGoal = goal
+                    } label: {
+                        Text(goal.title)
+                    }
+                }
+                
+                Text("Finished goals")
+                ForEach(inactiveGoals) { goal in
                     Button {
                         viewModel.selectedGoal = goal
                     } label: {
@@ -60,6 +79,19 @@ extension GoalListView: View {
         if let goal = viewModel.selectedGoal {
             GoalEditView(viewModel: factory.resolve(GoalEditViewModel.self, argument: goal))
         }
+    }
+}
+
+// MARK: - Logic
+
+extension GoalListView {
+    
+    static var activePredicate: NSPredicate {
+        NSPredicate(format: "statusString = %@ OR statusString = nil",Goal.Status.ongoing.rawValue)
+    }
+    
+    static var inactivePredicate: NSPredicate {
+        NSPredicate(format: "statusString != %@ AND statusString != nil",Goal.Status.ongoing.rawValue)
     }
 }
 

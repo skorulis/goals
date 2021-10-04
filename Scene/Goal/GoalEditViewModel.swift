@@ -9,7 +9,9 @@ import Foundation
 
 final class GoalEditViewModel: ObservableObject {
     
-    var goal: Goal
+    var goal: Goal?
+    
+    let database: PersistenceController
     
     @Published var selectingDate: Bool = false
     
@@ -18,12 +20,13 @@ final class GoalEditViewModel: ObservableObject {
     @Published var target: Date?
     @Published var status: Goal.Status
     
-    init(goal: Goal) {
+    init(goal: Goal?, database: PersistenceController) {
         self.goal = goal
-        self.title = goal.title
-        self.details = goal.details
-        self.target = goal.target
-        self.status = goal.status
+        self.database = database
+        self.title = goal?.title ?? ""
+        self.details = goal?.details ?? ""
+        self.target = goal?.target
+        self.status = goal?.status ?? .ongoing
     }
     
 }
@@ -49,6 +52,8 @@ extension GoalEditViewModel {
 extension GoalEditViewModel {
     
     func save() {
+        let goal = self.goal ?? Goal(context: database.container.viewContext)
+        
         goal.title = title
         goal.details = details
         goal.target = target
@@ -57,6 +62,7 @@ extension GoalEditViewModel {
     }
     
     func delete() {
+        guard let goal = goal else { return }
         goal.managedObjectContext?.delete(goal)
         try? goal.managedObjectContext?.save()
     }

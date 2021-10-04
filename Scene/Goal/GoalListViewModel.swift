@@ -29,6 +29,12 @@ extension GoalListViewModel {
     
 }
 
+// MARK: - Inner types
+
+extension GoalListViewModel {
+ 
+}
+
 // MARK: - Behaviors
 
 extension GoalListViewModel {
