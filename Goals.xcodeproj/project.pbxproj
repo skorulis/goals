@@ -48,6 +48,8 @@
 		FA8F5E5027081F70008607F6 /* GoalEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F5E4E27081F70008607F6 /* GoalEditView.swift */; };
 		FA8F5E5227081F96008607F6 /* GoalEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F5E5127081F96008607F6 /* GoalEditViewModel.swift */; };
 		FA8F5E5327081F96008607F6 /* GoalEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F5E5127081F96008607F6 /* GoalEditViewModel.swift */; };
+		FAA86984270EED11008FE948 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = FAA86983270EED11008FE948 /* SwinjectAutoregistration */; };
+		FAA86986270EED1D008FE948 /* ASSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FAA86985270EED1D008FE948 /* ASSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,8 +85,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA86986270EED1D008FE948 /* ASSwiftUI in Frameworks */,
 				FA100FD8270956E300F6D733 /* CloudKit.framework in Frameworks */,
 				FA8754712709B2AE003055FD /* Introspect in Frameworks */,
+				FAA86984270EED11008FE948 /* SwinjectAutoregistration in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +267,8 @@
 			name = "Goals (iOS)";
 			packageProductDependencies = (
 				FA8754702709B2AE003055FD /* Introspect */,
+				FAA86983270EED11008FE948 /* SwinjectAutoregistration */,
+				FAA86985270EED1D008FE948 /* ASSwiftUI */,
 			);
 			productName = "Goals (iOS)";
 			productReference = FA8F5E092707ECD9008607F6 /* Goals.app */;
@@ -539,7 +545,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.skorulis.Goals;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skorulis.goals;
 				PRODUCT_NAME = Goals;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -571,7 +577,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.skorulis.Goals;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skorulis.goals;
 				PRODUCT_NAME = Goals;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -603,7 +609,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.skorulis.Goals;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skorulis.goals;
 				PRODUCT_NAME = Goals;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -633,7 +639,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.skorulis.Goals;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skorulis.goals;
 				PRODUCT_NAME = Goals;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -711,6 +717,15 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FA87546F2709B2AE003055FD /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
 			productName = Introspect;
+		};
+		FAA86983270EED11008FE948 /* SwinjectAutoregistration */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA8F5E222707ED05008607F6 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			productName = SwinjectAutoregistration;
+		};
+		FAA86985270EED1D008FE948 /* ASSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ASSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 

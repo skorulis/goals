@@ -39,13 +39,9 @@ extension GoalListView: View {
     
     var body: some View {
         ScrollView {
-            VStack {
-                ForEach(activeGoals) { goal in
-                    Button {
-                        viewModel.selectedGoal = goal
-                    } label: {
-                        Text(goal.title)
-                    }
+            VStack(spacing: 8) {
+                ForEach(viewModel.activeGoals) { goal in
+                    cell(goal: goal)
                 }
                 
                 Text("Finished goals")
@@ -66,6 +62,24 @@ extension GoalListView: View {
             }
             navigation
         }
+        .padding(8)
+    }
+    
+    private func cell(goal: Goal) -> some View {
+        Button {
+            viewModel.selectedGoal = goal
+        } label: {
+            VStack(alignment: .leading) {
+                Text(goal.title)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            .frame(maxWidth: .infinity)
+            .overlay(
+                RoundedRectangle(cornerRadius: 5)
+                    .stroke(Color.neutral500, lineWidth: 2)
+            )
+        }
+        .buttonStyle(PlainButtonStyle())
     }
     
     private var navigation: some View {

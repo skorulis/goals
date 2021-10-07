@@ -8,7 +8,7 @@
 import CoreData
 import CloudKit
 
-struct PersistenceController {
+final class PersistenceController {
 
     let container: NSPersistentCloudKitContainer
     
@@ -16,19 +16,31 @@ struct PersistenceController {
         return PersistenceController(inMemory: true)
     }
     
-    init() {
+    convenience init() {
         self.init(inMemory: false)
     }
 
     private init(inMemory: Bool) {
         container = NSPersistentCloudKitContainer(name: "Goals")
+                
+        #if DEBUG
+        do {
+            // Use the container to initialize the development schema.
+            try container.initializeCloudKitSchema(options: [])
+        } catch {
+            debugPrint("Error setting up cloudkit \(error)")
+        }
+        #endif
+        
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         } else {
             let cloudPath = "iCloud.com.skorulis.goals"
             let desc = container.persistentStoreDescriptions.first!
             desc.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(containerIdentifier: cloudPath)
-                desc.cloudKitContainerOptions?.databaseScope = .public
+            desc.cloudKitContainerOptions?.databaseScope = .private
+            
+            //cloudKitContainerOptions.setValue(1, forKey: "databaseScope”)
             
             container.persistentStoreDescriptions = [desc]
         }
@@ -47,6 +59,7 @@ struct PersistenceController {
                 */
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
+            self.container.viewContext.automaticallyMergesChangesFromParent = true
         })
     }
     
